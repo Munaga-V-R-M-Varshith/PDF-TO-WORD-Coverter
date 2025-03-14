@@ -1,0 +1,17 @@
+from pdf2docx import Converter
+from tkinter import Tk, filedialog
+
+# 📌 Select PDF file using GUI
+Tk().withdraw()  # Hide Tkinter root window
+pdf_file = filedialog.askopenfilename(title="Select a PDF file", filetypes=[("PDF Files", "*.pdf")])
+
+# 📌 Convert PDF to Word
+if pdf_file:
+    output_docx = pdf_file.replace(".pdf", ".docx")  # Generate output filename
+    cv = Converter(pdf_file)
+    cv.convert(output_docx, start=0, end=None)  # Convert entire PDF
+    cv.close()
+
+    print(f"✅ Word document saved: {output_docx}")
+else:
+    print("❌ No PDF file selected.")
