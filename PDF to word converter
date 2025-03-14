@@ -15,3 +15,8 @@ if pdf_file:
     print(f"✅ Word document saved: {output_docx}")
 else:
     print("❌ No PDF file selected.")
+# Copyright (c) 2025 Munaga V R M Varshith
+# All rights reserved.
+#
+# Licensed under the MIT License. See the LICENSE file for details.
+
